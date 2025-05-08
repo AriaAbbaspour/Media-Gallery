@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Gallery</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200..300" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/modnorm.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200..300" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
   <nav id="main-nav" class="topnav">
     <a class="logo" href="#">
-      <img src="media/icon.png" alt="icon">
+      <img src="media/icon.png" alt="Gallery Logo">
     </a>
-    <a>About</a>
-    <a>Upload</a>
-    <a>Info</a>
-    <a>Credits</a>
-    <a href="javascript:void(0);" class="nav-item trigram">&#9776;</a>
+    <a href="#about">About</a>
+    <a href="#upload">Upload</a>
+    <a href="#info">Info</a>
+    <a href="#credits">Credits</a>
+    <a href="javascript:void(0);" class="nav-item trigram" aria-label="Menu">☰</a>
   </nav>
   <section class="slideshow">
-    <figure class="slide">
-      <img src="https://picsum.photos/1920/620/?random=20" alt="Random Image 20">
+    <figure class="slide" style="display: block;">
+      <img src="https://picsum.photos/1920/620/?random=20" alt="Hero Image 1">
       <figcaption class="figcaption">
-        <h1>Waiting for javascript...<h1r>
-        <p>Under construction! Coming soon ...</p>
+        <h1>Explore Our Media Gallery</h1>
+        <p>Discover stunning visuals!</p>
       </figcaption>
     </figure>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+    <figure class="slide">
+      <img src="https://picsum.photos/1920/620/?random=21" alt="Hero Image 2">
+      <figcaption class="figcaption">
+        <h1>Adventure Awaits</h1>
+        <p>Capture the moment!</p>
+      </figcaption>
+    </figure>
+    <figure class="slide">
+      <img src="https://picsum.photos/1920/620/?random=22" alt="Hero Image 3">
+      <figcaption class="figcaption">
+        <h1>Creative Vibes</h1>
+        <p>Unleash your imagination!</p>
+      </figcaption>
+    </figure>
+    <figure class="slide">
+      <img src="https://picsum.photos/1920/620/?random=23" alt="Hero Image 4">
+      <figcaption class="figcaption">
+        <h1>Timeless Moments</h1>
+        <p>Preserve the memories!</p>
+      </figcaption>
+    </figure>
+    <figure class="slide">
+      <img src="https://picsum.photos/1920/620/?random=24" alt="Hero Image 5">
+      <figcaption class="figcaption">
+        <h1>Visual Stories</h1>
+        <p>Every picture tells a tale!</p>
+      </figcaption>
+    </figure>
+    <button class="prev" aria-label="Previous Slide">❮</button>
+    <button class="next" aria-label="Next Slide">❯</button>
     <div class="dot-wrap">
-      <div class="dot"></div>
+      <div class="dot active"></div>
       <div class="dot"></div>
       <div class="dot"></div>
       <div class="dot"></div>
@@ -40,312 +67,242 @@
   </section>
   <aside>
     <h1 class="page-title">Media Gallery by Aria!</h1>
-    <p>This webpage generates images randomly. JavaScript should be used for coding and better visualization.</p>
+    <p>This gallery showcases randomly generated images with interactive features. Explore, favorite, and view your favorite visuals in a lightbox!</p>
   </aside>
   <main>
-    <article class="card" id="card-1">
+    <article class="card" id="card-1" data-title="Thrilling Escape">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=1" alt="Random Image 1">
+        <img src="https://picsum.photos/1920/1080/?random=1" alt="Card Image 1">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">92% Match</span>
-          <span class="rating">TV-MA</span>
-          <span class="quality">4K</span>
-          <span>DSLR</span>
-        </div>
-        <div class="tags">
-          <span>Thriller</span>
-          <span>Mystery</span>
-          <span>Intense</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Thrilling Escape</p>
+          <p><strong>Description:</strong> A high-octane chase through a neon-lit city.</p>
+          <p><strong>Tags:</strong> Thriller, Mystery, Intense</p>
+          <p><strong>Quality:</strong> 4K, DSLR</p>
         </div>
       </footer>
     </article>
-  
-    <article class="card" id="card-2">
+    <article class="card" id="card-2" data-title="Family Quest">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=2" alt="Random Image 2">
+        <img src="https://picsum.photos/1920/1080/?random=2" alt="Card Image 2">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">85% Match</span>
-          <span class="rating">PG-13</span>
-          <span class="quality">HD</span>
-          <span>Mirrorless</span>
-        </div>
-        <div class="tags">
-          <span>Adventure</span>
-          <span>Family</span>
-          <span>Fantasy</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Family Quest</p>
+          <p><strong>Description:</strong> A heartwarming journey of discovery.</p>
+          <p><strong>Tags:</strong> Adventure, Family, Fantasy</p>
+          <p><strong>Quality:</strong> HD, Mirrorless</p>
         </div>
       </footer>
     </article>
-  
-    <article class="card" id="card-3">
+    <article class="card" id="card-3" data-title="Romantic Sunset">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=3" alt="Random Image 3">
+        <img src="https://picsum.photos/1920/1080/?random=3" alt="Card Image 3">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">95% Match</span>
-          <span class="rating">TV-14</span>
-          <span class="quality">HD</span>
-          <span>Point-and-Shoot</span>
-        </div>
-        <div class="tags">
-          <span>Comedy</span>
-          <span>Drama</span>
-          <span>Romance</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Romantic Sunset</p>
+          <p><strong>Description:</strong> A comedic yet heartfelt love story.</p>
+          <p><strong>Tags:</strong> Comedy, Drama, Romance</p>
+          <p><strong>Quality:</strong> HD, Point-and-Shoot</p>
         </div>
       </footer>
     </article>
-  
-    <article class="card" id="card-4">
+    <article class="card" id="card-4" data-title="Crime City">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=4" alt="Random Image 4">
+        <img src="https://picsum.photos/1920/1080/?random=4" alt="Card Image 4">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">90% Match</span>
-          <span class="rating">R</span>
-          <span class="quality">4K</span>
-          <span>Cinema</span>
-        </div>
-        <div class="tags">
-          <span>Action</span>
-          <span>Crime</span>
-          <span>Suspense</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Crime City</p>
+          <p><strong>Description:</strong> A gritty tale of justice and betrayal.</p>
+          <p><strong>Tags:</strong> Action, Crime, Suspense</p>
+          <p><strong>Quality:</strong> 4K, Cinema</p>
         </div>
       </footer>
     </article>
-  
-    <article class="card" id="card-5">
+    <article class="card" id="card-5" data-title="Animated Fun">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=5" alt="Random Image 5">
+        <img src="https://picsum.photos/1920/1080/?random=5" alt="Card Image 5">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">87% Match</span>
-          <span class="rating">TV-PG</span>
-          <span class="quality">SD</span>
-          <span>Action</span>
-        </div>
-        <div class="tags">
-          <span>Animation</span>
-          <span>Kids</span>
-          <span>Fun</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Animated Fun</p>
+          <p><strong>Description:</strong> A colorful adventure for all ages.</p>
+          <p><strong>Tags:</strong> Animation, Kids, Fun</p>
+          <p><strong>Quality:</strong> SD, Action</p>
         </div>
       </footer>
     </article>
-  
-    <article class="card" id="card-6">
+    <article class="card" id="card-6" data-title="Haunted Night">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=6" alt="Random Image 6">
+        <img src="https://picsum.photos/1920/1080/?random=6" alt="Card Image 6">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">93% Match</span>
-          <span class="rating">TV-MA</span>
-          <span class="quality">HD</span>
-          <span>Drone</span>
-        </div>
-        <div class="tags">
-          <span>Horror</span>
-          <span>Supernatural</span>
-          <span>Creepy</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Haunted Night</p>
+          <p><strong>Description:</strong> A chilling supernatural thriller.</p>
+          <p><strong>Tags:</strong> Horror, Supernatural, Creepy</p>
+          <p><strong>Quality:</strong> HD, Drone</p>
         </div>
       </footer>
     </article>
-  
-    <article class="card" id="card-7">
+    <article class="card" id="card-7" data-title="Space Odyssey">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=7" alt="Random Image 7">
+        <img src="https://picsum.photos/1920/1080/?random=7" alt="Card Image 7">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">89% Match</span>
-          <span class="rating">PG</span>
-          <span class="quality">HD</span>
-          <span>Mirrorless</span>
-        </div>
-        <div class="tags">
-          <span>Sci-Fi</span>
-          <span>Exploration</span>
-          <span>Future</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Space Odyssey</p>
+          <p><strong>Description:</strong> A futuristic exploration epic.</p>
+          <p><strong>Tags:</strong> Sci-Fi, Exploration, Future</p>
+          <p><strong>Quality:</strong> HD, Mirrorless</p>
         </div>
       </footer>
     </article>
-  
-    <article class="card" id="card-8">
+    <article class="card" id="card-8" data-title="Historical Saga">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=8" alt="Random Image 8">
+        <img src="https://picsum.photos/1920/1080/?random=8" alt="Card Image 8">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">91% Match</span>
-          <span class="rating">TV-14</span>
-          <span class="quality">4K</span>
-          <span>Cinema</span>
-        </div>
-        <div class="tags">
-          <span>Drama</span>
-          <span>Historical</span>
-          <span>Epic</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Historical Saga</p>
+          <p><strong>Description:</strong> An epic tale of ancient empires.</p>
+          <p><strong>Tags:</strong> Drama, Historical, Epic</p>
+          <p><strong>Quality:</strong> 4K, Cinema</p>
         </div>
       </footer>
     </article>
-  
-    <article class="card" id="card-9">
+    <article class="card" id="card-9" data-title="Heroic Tales">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=9" alt="Random Image 9">
+        <img src="https://picsum.photos/1920/1080/?random=9" alt="Card Image 9">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">84% Match</span>
-          <span class="rating">TV-Y7</span>
-          <span class="quality">HD</span>
-          <span>Point-and-Shoot</span>
-        </div>
-        <div class="tags">
-          <span>Cartoon</span>
-          <span>Action</span>
-          <span>Youth</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Heroic Tales</p>
+          <p><strong>Description:</strong> An action-packed cartoon adventure.</p>
+          <p><strong>Tags:</strong> Cartoon, Action, Youth</p>
+          <p><strong>Quality:</strong> HD, Point-and-Shoot</p>
         </div>
       </footer>
     </article>
-  
-    <article class="card" id="card-10">
+    <article class="card" id="card-10" data-title="Underworld Crime">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=10" alt="Random Image 10">
+        <img src="https://picsum.photos/1920/1080/?random=10" alt="Card Image 10">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">94% Match</span>
-          <span class="rating">TV-MA</span>
-          <span class="quality">4K</span>
-          <span>DSLR</span>
-        </div>
-        <div class="tags">
-          <span>Crime</span>
-          <span>Intense</span>
-          <span>Realistic</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Underworld Crime</p>
+          <p><strong>Description:</strong> A tense drama of loyalty and deception.</p>
+          <p><strong>Tags:</strong> Crime, Intense, Realistic</p>
+          <p><strong>Quality:</strong> 4K, DSLR</p>
         </div>
       </footer>
     </article>
-  
-    <article class="card" id="card-11">
+    <article class="card" id="card-11" data-title="Love in Bloom">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=11" alt="Random Image 11">
+        <img src="https://picsum.photos/1920/1080/?random=11" alt="Card Image 11">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">88% Match</span>
-          <span class="rating">PG-13</span>
-          <span class="quality">HD</span>
-          <span>Action</span>
-        </div>
-        <div class="tags">
-          <span>Romance</span>
-          <span>Feel-Good</span>
-          <span>Light</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Love in Bloom</p>
+          <p><strong>Description:</strong> A light-hearted romantic journey.</p>
+          <p><strong>Tags:</strong> Romance, Feel-Good, Light</p>
+          <p><strong>Quality:</strong> HD, Action</p>
         </div>
       </footer>
     </article>
-  
-    <article class="card" id="card-12">
+    <article class="card" id="card-12" data-title="Friends Forever">
       <header class="card-header">
-        <img src="https://picsum.photos/1920/1080/?random=12" alt="Random Image 12">
+        <img src="https://picsum.photos/1920/1080/?random=12" alt="Card Image 12">
       </header>
       <footer class="card-footer">
         <div class="actions">
-          <button title="Seen" class="material-symbols-outlined">check_circle</button>
-          <button title="Watch" class="material-symbols-outlined">add_circle</button>
-          <button title="Like" class="material-symbols-outlined">recommend</button>
-          <button title="More" class="material-symbols-outlined more">expand_circle_down</button>
+          <button title="Favorite" class="material-symbols-outlined favorite">favorite</button>
+          <button title="View in Lightbox" class="material-symbols-outlined lightbox">fullscreen</button>
+          <button title="Info" class="material-symbols-outlined info">info</button>
+          <button title="Share" class="material-symbols-outlined share">share</button>
         </div>
-        <div class="stats">
-          <span class="likes">96% Match</span>
-          <span class="rating">TV-14</span>
-          <span class="quality">HD</span>
-          <span>Drone</span>
-        </div>
-        <div class="tags">
-          <span>Sitcom</span>
-          <span>Funny</span>
-          <span>Friendship</span>
+        <div class="info-panel">
+          <p><strong>Title:</strong> Friends Forever</p>
+          <p><strong>Description:</strong> A hilarious sitcom about friendship.</p>
+          <p><strong>Tags:</strong> Sitcom, Funny, Friendship</p>
+          <p><strong>Quality:</strong> HD, Drone</p>
         </div>
       </footer>
     </article>
   </main>
   <footer class="site-footer">
-    <p>&copy;2025 Aria Abbaspour</p>
+    <p>© 2025 Aria Abbaspour</p>
   </footer>
-  <script src="main.js"></script>
-</body>
+  <script src="slideshow.js"></script>
+  <script src="cardInteractions.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93bacb33ceed39a4',t:'MTc0NjU1ODc5NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
